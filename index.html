@@ -21,9 +21,8 @@
       </div>
 
       <div class="mymayning">
-        <div class="mayning">
+        <div class="mayning" id="mayning">
           <img id="token" src="./tg-token.png" alt="Token Image" class="mayning-img" />
-          <div id="info"></div>
         </div>
         <div class="mayning">
           <input
@@ -67,22 +66,43 @@
   </body>
  <script src="./index.js"></script>
  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const token = document.getElementById('token');
+      const conts = document.getElementById('mayning');
+      const clicker = document.getElementById('clicker');
+      const level = localStorage.getItem('level');
+
       function handleClick(event) {
-      if (event.target.id === 'token') {
+        if (event.target === token) {
+          const x = event.clientX;
+          const y = event.clientY;
 
-        event.target.classList.add('clicked');
+          token.classList.add('clicked');
 
-        const x = event.clientX;
-        const y = event.clientY;
+          // Create and position the span
+          const newSpan = document.createElement('span');
+          newSpan.textContent = level;
+          newSpan.style.display = 'block';
+          newSpan.classList.add('clicked-position');
+          newSpan.style.left = `${x}px`;
+          newSpan.style.top = `${y}px`;
+          conts.appendChild(newSpan);
 
-        setTimeout(() => {
-          event.target.classList.remove('clicked');
-          infoDiv.innerHTML = ''; 
-        }, 10); 
+          // Animate the span
+          setTimeout(() => {
+            newSpan.style.transform = 'scale(1.5)';
+            newSpan.style.top = '0px'
+            newSpan.style.transition = 'all 0.6s ease';
+            newSpan.style.opacity = '0';
+          }, 30);
+
+          setTimeout(() => {
+            newSpan.remove();
+            token.classList.remove('clicked');
+          }, 1000);
+        }
       }
-    }
-
-
-    document.addEventListener('click', handleClick);
+      document.addEventListener('click', handleClick);
+    });
  </script>
 </html>
