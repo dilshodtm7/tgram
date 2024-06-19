@@ -22,7 +22,8 @@
 
       <div class="mymayning">
         <div class="mayning">
-          <img id="token" src="./tg-token.png" alt="" class="mayning-img" />
+          <img id="token" src="./tg-token.png" alt="Token Image" class="mayning-img" />
+          <div id="info"></div>
         </div>
         <div class="mayning">
           <input
@@ -65,4 +66,23 @@
       </div>
   </body>
  <script src="./index.js"></script>
+ <script>
+      function handleClick(event) {
+      if (event.target.id === 'token') {
+
+        event.target.classList.add('clicked');
+
+        const x = event.clientX;
+        const y = event.clientY;
+
+        setTimeout(() => {
+          event.target.classList.remove('clicked');
+          infoDiv.innerHTML = ''; 
+        }, 10); 
+      }
+    }
+
+
+    document.addEventListener('click', handleClick);
+ </script>
 </html>
