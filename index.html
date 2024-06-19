@@ -78,7 +78,7 @@
       const level = localStorage.getItem("level");
 
       function handleClick(event) {
-        if (event.target === token) {
+        if (event.target === token  && localStorage.getItem("minus") < level) {
           const x = event.clientX;
           const y = event.clientY;
 
