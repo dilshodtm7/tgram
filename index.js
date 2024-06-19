@@ -4,7 +4,6 @@ const level = localStorage.getItem("level");
 const energy = localStorage.getItem("energy");
 const mylevelpush = document.getElementById("level");
 const mybalance = document.getElementById("mybalance");
-
 const mylevel = parseInt(level);
 const earned = document.getElementById("earned");
 const allearn = document.getElementById("allearn");
@@ -12,24 +11,15 @@ const forMinus = localStorage.getItem("minus");
 const recharge = localStorage.getItem("recharge");
 const slider = document.getElementById("slider");
 
-
-
-
-
-// Initialize balance and level if they are not set in localStorage
 if (balance === null) {
   localStorage.setItem("balance", 0);
 }
 if (level === null) {
   localStorage.setItem("level", 1);
 }
-
 if (energy === null) {
   localStorage.setItem("energy", 1);
 }
-
-
-
 
 mylevelpush.innerHTML = mylevel;
 
@@ -47,9 +37,11 @@ const rechargeLimit = parseInt(recharge);
 if (forMinus) {
   earned.innerHTML = forMinus;
 } else {
-  localStorage.setItem("minus", minuses);
+  localStorage.setItem("minus", 500);
+  location.reload();
   earned.innerHTML = localStorage.getItem("minus");
 }
+
 allearn.innerHTML = mylevelpilus;
 token.addEventListener("click", function () {
   if (level) {
@@ -85,9 +77,3 @@ function updateValues() {
 }
 
 setInterval(updateValues, 1000);
-
-
-
-
-
-
