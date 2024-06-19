@@ -371,3 +371,14 @@ input[type="range"] {
     align-items: center;
     width: 100%;
 }
+
+
+.mayning-img {
+    /* width: 100px;
+    height: 100px; */
+    transition: transform 0.1s, opacity 0.1s; /* Add transition properties */
+  }
+  .clicked {
+    transform: scale(1.2); /* Example transformation: scale up */
+    opacity: 0.8; /* Example transformation: reduce opacity */
+  }
