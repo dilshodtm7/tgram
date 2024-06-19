@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Click Position</title>
+  <link rel="stylesheet" href="./index.css" />
+  <style>
+    .mayning-img {
+      width: 100px;
+      height: 100px;
+      transition: transform 0.1s, opacity 0.1s; /* Add transition properties */
+    }
+    .clicked {
+      transform: scale(1.2); /* Example transformation: scale up */
+      opacity: 0.8; /* Example transformation: reduce opacity */
+    }
+  </style>
+</head>
+<body>
+  <img id="token" src="./tg-token.png" alt="Token Image" class="mayning-img" />
+  <div id="info"></div>
+
+  <script>
+    // Function to handle click events
+    function handleClick(event) {
+      // Check if the click is on the token image
+      if (event.target.id === 'token') {
+        // Add zoom effect by adding the 'clicked' class
+        event.target.classList.add('clicked');
+
+        // Get the click coordinates relative to the viewport
+        const x = event.clientX;
+        const y = event.clientY;
+
+        // Display the coordinates
+        const infoDiv = document.getElementById('info');
+        infoDiv.innerHTML = `Click Position - X: ${x}, Y: ${y}`;
+
+        // Remove the class after the transition ends to allow it to be re-applied
+        setTimeout(() => {
+          event.target.classList.remove('clicked');
+          infoDiv.innerHTML = ''; // Clear coordinates after transition
+        }, 10); // This should match the transition duration
+      }
+    }
+
+    // Add event listener to the document for click events
+    document.addEventListener('click', handleClick);
+  </script>
+</body>
+</html>

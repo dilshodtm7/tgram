@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #4E92E3;
+    font-weight: bold;
+}
+body{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+.tokens{
+    width: 70px;
+    height: 70px;
+}
+.balances{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.balance{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+    color:#4E92E3;
+}
+.container{
+    height: calc(100% - 70px);
+}
+.league{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    height: 50px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+
+}
+.hrr{
+    width: 1px;
+    height: 50px;
+    background-color: red;
+}
+.myclan-img{
+    width: 30px;
+
+
+}
+.myclan{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.clan-name{
+    margin-left: 10px;
+    color:#4E92E3;
+    font-weight: bold;
+    font-size: 13px;
+}
+.mayning{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.mayning-img{
+    width: 280px;
+}
+
+
+input[type="range"] {
+    outline: 0;
+    border: 0;
+    border-radius: 500px;
+    width: 300px;
+    max-width: 100%;
+    margin: 24px 0 16px;
+    transition: box-shadow 0.2s ease-in-out;
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        & {
+            overflow: hidden;
+            height: 7px;
+            -webkit-appearance: none;
+            /* background-color: #ddd; */
+        }
+        &::-webkit-slider-runnable-track {
+            height: 0px;
+            -webkit-appearance: none;
+            color: #444;
+         margin-top: -1px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        &::-webkit-slider-thumb {
+            width: 5px;
+            -webkit-appearance: none;
+            height: 0px;
+            cursor: ew-resize;
+       
+            box-shadow: -340px 0 0 335px #1597ff, inset 0 0 0 40px #1597ff;
+            border-radius: 50%;
+            transition: box-shadow 0.2s ease-in-out;
+            position: relative;
+           top: 1px;
+        }
+        &:active::-webkit-slider-thumb {
+            background: #fff;
+            box-shadow: -340px 0 0 335px #1597ff, inset 0 0 0 3px #1597ff;
+        }
+    }
+
+    &::-moz-range-progress {
+        background-color: #43e5f7; 
+    }
+    &::-moz-range-track {  
+        background-color: #9a905d;
+    }
+
+    &::-ms-fill-lower {
+        background-color: #43e5f7; 
+    }
+    &::-ms-fill-upper {  
+        background-color: #9a905d;
+    }
+
+}
+.slider{
+    background-color: white;
+}
+.spans{
+    color: white;
+}
+.task{
+    display: block;
+
+}
+.task-img{
+    width: 30px;
+    height: 30px;
+
+}
+.task-name{
+    color:#4E92E3;
+    font-weight: bold;
+    font-size: 14px;
+}
+.mymayning{
+    margin-top: 30px;
+}
+
+.earn-container{
+    background-color: rgb(54, 54, 54);
+    height: 70vh;
+    width: 98%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+
+}
+.earn-containers{
+ 
+    background-color: rgb(110, 109, 109);
+    height: 20vh;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
+.boost-container{
+    background-color: rgb(54, 54, 54);
+    width: 98%;
+
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.taps{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.taps-img{
+    width: 50px;
+
+}
+
+.taps-name{
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+
+.btn-league{
+    background-color: transparent !important;
+    color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boost-menu-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    height: 60px;
+    width: 90%;
+    margin:  auto;
+    border-radius: 20px;   
+}
+.earn-menu-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    height: 60px;
+    width: 90%;
+    margin:  auto;
+    border-radius: 20px;   
+}
+.earn-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.earn-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.referal-containers{
+ 
+    background-color: black !important;
+    height: 10vh;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+
+}
+
+.referal-container{
+ 
+    background-color: black ;
+    height: 10vh;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    border: #4E92E3 solid 1px;
+    margin: 5px auto;
+    
+
+}
+
+.copy-btn{
+
+    background-color: #4E92E3;
+    color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.referal-link{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    border-radius: 10px;
+    height: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+.ref-container{
+    background-color: rgb(54, 54, 54);
+    height: 60vh;
+    width: 98%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+
+}
+.ref-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.ref-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.my-ref{
+    font-size: 25px;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+.d-flexes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-taps{
+    background-color: transparent !important;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.taps-names{
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.d-flexs{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+.buttonses{
+    background-color: rgb(54, 54, 54);
+    height: 60px;
+    width: 98%;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: #4E92E3 solid 1px;
+    margin: 5px auto;
+    cursor: pointer;
+
+
+}
+.ddd{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

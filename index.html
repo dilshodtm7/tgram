@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="balances">
+        <img src="./tg-token.png" alt="" class="tokens" />
+        <h2 class="balance" id="mybalance"></h2>
+      </div>
+      <div class="league">
+        <div class="myclan">
+          <img src="./tg-token.png" alt="" class="myclan-img" />
+          <h2 class="clan-name">LEVEL</h2>
+          <h2 class="clan-name" id="level"></h2>
+        </div>
+      </div>
+
+      <div class="mymayning">
+        <div class="mayning">
+          <img id="token" src="./tg-token.png" alt="" class="mayning-img" />
+        </div>
+        <div class="mayning">
+          <input
+            class="slider"
+            disabled
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            id="slider"
+          />
+        </div>
+        <div class="mayning">
+          <span class="spans">⚡</span><span class="spans" id="earned">500</span><span class="spans">/</span> <span class="spans" id="allearn"></span>
+        </div>
+      </div>
+     
+    </div>
+    <div class="boost-menu-list">
+        <a href="/earn.html">
+          <button class="btn-league">
+            <img src="./money.png" alt="" class="task-img" />
+            <h2 class="task-name">EARN</h2>
+          </button>
+        </a>
+        <hr class="hrr" />
+        <a href="/boost.html">
+          <button class="btn-league">
+            <img src="./rocket.png" alt="" class="task-img" />
+            <h2 class="task-name">BOOST</h2>
+          </button></a
+        >
+        <hr class="hrr" />
+        <a href="/invite.html">
+          <button class="btn-league">
+            <img src="./ref.png" alt="" class="task-img" />
+            <h2 class="task-name">INVITE</h2>
+          </button>
+        </a>
+      </div>
+  </body>
+ <script src="./index.js"></script>
+</html>
