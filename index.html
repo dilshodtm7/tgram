@@ -22,7 +22,12 @@
 
       <div class="mymayning">
         <div class="mayning" id="mayning">
-          <img id="token" src="./tg-token.png" alt="Token Image" class="mayning-img" />
+          <img
+            id="token"
+            src="./tg-token.png"
+            alt="Token Image"
+            class="mayning-img"
+          />
         </div>
         <div class="mayning">
           <input
@@ -36,73 +41,73 @@
           />
         </div>
         <div class="mayning">
-          <span class="spans">⚡</span><span class="spans" id="earned">500</span><span class="spans">/</span> <span class="spans" id="allearn"></span>
+          <span class="spans">⚡</span><span class="spans" id="earned">500</span
+          ><span class="spans">/</span> <span class="spans" id="allearn"></span>
         </div>
       </div>
-     
     </div>
     <div class="boost-menu-list">
-        <a href="/earn.html">
-          <button class="btn-league">
-            <img src="./money.png" alt="" class="task-img" />
-            <h2 class="task-name">EARN</h2>
-          </button>
-        </a>
-        <hr class="hrr" />
-        <a href="/boost.html">
-          <button class="btn-league">
-            <img src="./rocket.png" alt="" class="task-img" />
-            <h2 class="task-name">BOOST</h2>
-          </button></a
-        >
-        <hr class="hrr" />
-        <a href="/invite.html">
-          <button class="btn-league">
-            <img src="./ref.png" alt="" class="task-img" />
-            <h2 class="task-name">INVITE</h2>
-          </button>
-        </a>
-      </div>
+      <a href="/earn.html">
+        <button class="btn-league">
+          <img src="./money.png" alt="" class="task-img" />
+          <h2 class="task-name">EARN</h2>
+        </button>
+      </a>
+      <hr class="hrr" />
+      <a href="/boost.html">
+        <button class="btn-league">
+          <img src="./rocket.png" alt="" class="task-img" />
+          <h2 class="task-name">BOOST</h2>
+        </button></a
+      >
+      <hr class="hrr" />
+      <a href="/invite.html">
+        <button class="btn-league">
+          <img src="./ref.png" alt="" class="task-img" />
+          <h2 class="task-name">INVITE</h2>
+        </button>
+      </a>
+    </div>
   </body>
- <script src="./index.js"></script>
- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const token = document.getElementById('token');
-      const conts = document.getElementById('mayning');
-      const clicker = document.getElementById('clicker');
-      const level = localStorage.getItem('level');
+  <script src="./index.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const token = document.getElementById("token");
+      const conts = document.getElementById("mayning");
+      const clicker = document.getElementById("clicker");
+      const level = localStorage.getItem("level");
 
       function handleClick(event) {
         if (event.target === token) {
           const x = event.clientX;
           const y = event.clientY;
 
-          token.classList.add('clicked');
+          token.classList.add("clicked");
 
           // Create and position the span
-          const newSpan = document.createElement('span');
+          const newSpan = document.createElement("span");
           newSpan.textContent = level;
-          newSpan.style.display = 'block';
-          newSpan.classList.add('clicked-position');
+          newSpan.style.display = "block";
+          newSpan.classList.add("clicked-position");
           newSpan.style.left = `${x}px`;
           newSpan.style.top = `${y}px`;
           conts.appendChild(newSpan);
 
           // Animate the span
           setTimeout(() => {
-            newSpan.style.transform = 'scale(1.5)';
-            newSpan.style.top = '0px'
-            newSpan.style.transition = 'all 0.6s ease';
-            newSpan.style.opacity = '0';
+            newSpan.style.transform = "scale(1.5)";
+            newSpan.style.top = "0px";
+            newSpan.style.transition = "all 0.6s ease";
+            newSpan.style.opacity = "0";
           }, 30);
 
           setTimeout(() => {
             newSpan.remove();
-            token.classList.remove('clicked');
+            token.classList.remove("clicked");
           }, 1000);
         }
       }
-      document.addEventListener('click', handleClick);
+      document.addEventListener("click", handleClick);
     });
- </script>
+  </script>
 </html>
