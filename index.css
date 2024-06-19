@@ -379,6 +379,13 @@ input[type="range"] {
     transition: transform 0.1s, opacity 0.1s; /* Add transition properties */
   }
   .clicked {
-    transform: scale(1.2); /* Example transformation: scale up */
+    transform: scale(1.1); /* Example transformation: scale up */
     opacity: 0.8; /* Example transformation: reduce opacity */
+  }
+  .clicked-position {
+    position: fixed;
+    font-size: 22px;
+    color: white;
+    display: none;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Add opacity transition */
   }
